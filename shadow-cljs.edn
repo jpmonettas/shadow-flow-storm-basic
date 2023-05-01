@@ -1,6 +1,6 @@
 {:source-paths ["src"]
  :nrepl {:port 7123}
- :dependencies [[com.github.jpmonettas/flow-storm-inst "3.4.0"]]
+ :dependencies [[com.github.jpmonettas/flow-storm-inst "3.5.0"]]
  :dev-http {8000 "public"}
  :builds
  {:dev-test {:target :browser
