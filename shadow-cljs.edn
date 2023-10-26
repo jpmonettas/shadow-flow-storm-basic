@@ -1,10 +1,12 @@
-{:source-paths ["src"]
+{:deps {:aliases [:cljs-storm]}
+ :source-paths ["src"]
  :nrepl {:port 7123}
- :dependencies [[com.github.jpmonettas/flow-storm-inst "3.6.8"]]
- :dev-http {8000 "public"}
  :builds
  {:dev-test {:target :browser
-             :devtools {:preloads [flow-storm.api]}
+             :devtools {:preloads [flow-storm.storm-preload]
+                        :http-port 8021
+                        :http-root "public"}
              :modules {:main
                        {:entries [org.foo.myscript]}}
+             :compiler-options {:infer-externs false}
              :output-to "public/dev-test.js"}}}
