@@ -30,6 +30,9 @@ You can now copy the settings from this repo to your own projects and try it the
 
 Checkout the user guide for documentation on each tool https://jpmonettas.github.io/flow-storm-debugger/user_guide.html
 
+![demo](./images/tree.png)
+![demo](./images/stepper.png)
+
 
 
 
