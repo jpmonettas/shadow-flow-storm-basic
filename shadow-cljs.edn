@@ -1,6 +1,9 @@
 {:deps {:aliases [:cljs-storm]}
  :source-paths ["src"]
- :nrepl {:port 7123}
+ :nrepl {:port 7123
+         ;; Enable this if you want to use it with cider-storm
+         ;; :middleware [flow-storm.nrepl.middleware/wrap-flow-storm]
+         }
  :builds
  {:dev-test {:target :browser
              :devtools {:preloads [flow-storm.storm-preload]
