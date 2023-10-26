@@ -5,5 +5,4 @@
     1
     (* n (factorial (dec n)))))
 
-(defn main []
-  (js/console.log "Main executed"))
+(js/console.log "Main executed. Factorial of 5 is : " (factorial 5))
