@@ -6,6 +6,4 @@
                                      com.github.flow-storm/clojurescript {:mvn/version "1.11.60-4"}
                                      com.github.flow-storm/flow-storm-dbg {:mvn/version "3.8.3"}}
                         :jvm-opts ["-Dcljs.storm.instrumentOnlyPrefixes=org.foo,dev,cljs.user"
-                                   "-Dcljs.storm.instrumentEnable=true"
-                                   "-Dflowstorm.startRecording=true"
-                                   "-Dflowstorm.theme=dark"]}}}
+                                   "-Dcljs.storm.instrumentEnable=true"]}}}

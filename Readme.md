@@ -8,7 +8,7 @@ Basic template for trying FlowStorm(https://github.com/jpmonettas/flow-storm-deb
 - on one terminal run `npx shadow-cljs watch :dev-test` to watch and compile your code
 - open http://localhost:8021
 - connect a repl to your process ` npx shadow-cljs cljs-repl :dev-test`
-- on another run the debugger `clj -Sforce -Sdeps '{:deps {com.github.flow-storm/flow-storm-dbg {:mvn/version "3.8.3"}}}' -X flow-storm.debugger.main/start-debugger :repl-type :shadow :build-id :dev-test :port 7123`
+- on another run the debugger `clj -J-Dflowstorm.startRecording=true -Sforce -Sdeps '{:deps {com.github.flow-storm/flow-storm-dbg {:mvn/version "3.8.3"}}}' -X flow-storm.debugger.main/start-debugger :repl-type :shadow :build-id :dev-test :port 7123`
 
 That last command should bring the debugger UI connected to your shadow nrepl server and browser application process.
 
