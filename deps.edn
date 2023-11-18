@@ -5,9 +5,9 @@
                                               org.clojure/clojurescript nil}
                         :extra-deps {thheller/shadow-cljs {:mvn/version "2.25.6"
                                                            :exclusions [org.clojure/clojurescript]}
-                                     com.github.flow-storm/clojure {:mvn/version "1.11.1-13"}
-                                     com.github.flow-storm/clojurescript {:mvn/version "1.11.60-4"}
-                                     com.github.flow-storm/flow-storm-dbg {:mvn/version "3.8.3"}}
+                                     com.github.flow-storm/clojure {:mvn/version "1.11.1-15"}
+                                     com.github.flow-storm/clojurescript {:mvn/version "1.11.60-7"}
+                                     com.github.flow-storm/flow-storm-dbg {:mvn/version "3.8.6"}}
                         :jvm-opts ["-Dclojure.storm.instrumentOnlyPrefixes=org.foo,dev"
                                    "-Dclojure.storm.instrumentEnable=true"
                                    "-Dcljs.storm.instrumentOnlyPrefixes=org.foo,dev"
