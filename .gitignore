@@ -1,3 +1,6 @@
+/.calva/
+/.clj-kondo/
+/.lsp/
 /.cljs_node_repl/
 /.cpcache/
 /.shadow-cljs/
