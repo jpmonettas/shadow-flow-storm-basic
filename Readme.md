@@ -26,6 +26,8 @@ and then call it `(foo 1 2)`
 
 If everything is fine, great! you are successfully running FlowStorm in ClojureScript.
 
+Note: To launch the Clojure Debugger, evaluate `:dbg`in the Clojure REPL.
+
 You can now copy the settings from this repo to your own projects and try it there.
 
 Checkout the user guide for documentation on each tool https://jpmonettas.github.io/flow-storm-debugger/user_guide.html

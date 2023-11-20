@@ -1,8 +1,5 @@
 (ns org.foo.myscript)
 
-(require '[flow-storm.api :as fs-api])
-(fs-api/local-connect)
-
 (defn factorial [n]
   (if (zero? n)
     1
