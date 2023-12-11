@@ -3,7 +3,7 @@ Basic template for trying FlowStorm(https://github.com/jpmonettas/flow-storm-deb
 ## Instructions
 
 - clone this repo, and cd into it
-- make sure shadow-cljs.edn contains the latest version of `com.github.jpmonettas/flow-storm-inst`
+- make sure deps.edn contains the latest version of `com.github.jpmonettas/flow-storm-inst` and `com.github.flow-storm/clojurescript`
 - run `npm install` to install the packages in package.json
 - on one terminal run `npx shadow-cljs watch :dev-test` to watch and compile your code
 - open http://localhost:8021

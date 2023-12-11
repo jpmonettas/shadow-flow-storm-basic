@@ -1,5 +1,4 @@
 {:deps {:aliases [:cljs-storm]}
- :source-paths ["src"]
  :nrepl {:port 7123
          ;; Enable this if you want to use it with cider-storm
          ;; :middleware [flow-storm.nrepl.middleware/wrap-flow-storm]
@@ -11,5 +10,14 @@
                         :http-root "public"}
              :modules {:main
                        {:entries [org.foo.myscript]}}
-             :compiler-options {:infer-externs false}
+             :compiler-options {:infer-externs false
+
+                                :closure-defines {
+                                                  ;; Uncomment this if your debugger UI is running on a different host
+                                                  ;; flow-storm.remote-websocket-client/host "192.168.1.101"
+
+                                                  ;; Uncomment this if your debugger UI is running on a different port
+                                                  ;; flow-storm.remote-websocket-client/port 7744
+                                                  }
+                                }
              :output-to "public/dev-test.js"}}}
