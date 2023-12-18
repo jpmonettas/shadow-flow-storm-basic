@@ -5,19 +5,14 @@
          }
  :builds
  {:dev-test {:target :browser
-             :devtools {:preloads [flow-storm.storm-preload]
-                        :http-port 8021
+             :output-dir "public/js/"
+             :devtools {:http-port 8021
                         :http-root "public"}
-             :modules {:main
-                       {:entries [org.foo.myscript]}}
-             :compiler-options {:infer-externs false
-
-                                :closure-defines {
-                                                  ;; Uncomment this if your debugger UI is running on a different host
-                                                  ;; flow-storm.remote-websocket-client/host "192.168.1.101"
-
-                                                  ;; Uncomment this if your debugger UI is running on a different port
-                                                  ;; flow-storm.remote-websocket-client/port 7744
-                                                  }
-                                }
-             :output-to "public/dev-test.js"}}}
+             :modules {:shared {:entries []}
+                       :main {:init-fn org.foo.myscript/init
+                              :preloads [org.foo.myscript-preload]
+                              :depends-on #{:shared}}
+                       :worker {:web-worker true
+                                :init-fn org.foo.worker/init
+                                :preloads [org.foo.worker-preload]
+                                :depends-on #{:shared}}}}}}

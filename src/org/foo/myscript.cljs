@@ -1,8 +1,8 @@
 (ns org.foo.myscript)
 
-(defn factorial [n]
-  (if (zero? n)
-    1
-    (* n (factorial (dec n)))))
-
-(js/console.log "Main executed. Factorial of 5 is : " (factorial 5))
+(defn init []
+  (js/console.log "[MYSCRIPT] Initializing myscript. Posting message ...")
+  (let [worker (js/Worker. "/js/worker.js")]
+    (.. worker (addEventListener "message" (fn [e]
+                                             (js/console.log "[MYSCRIPT] Got message" e))))
+    (.. worker (postMessage "hello world"))))
