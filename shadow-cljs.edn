@@ -1,14 +1,14 @@
-{:deps {:aliases [:cljs-storm]}
+{:deps {:aliases [:cljs-storm #_:vanilla]}
  :nrepl {:port 7123
          ;; Enable this if you want to use it with cider-storm
          ;; :middleware [flow-storm.nrepl.middleware/wrap-flow-storm]
          }
  :builds
  {:dev-test {:target :browser
-             :devtools {:preloads [flow-storm.storm-preload]
+             :devtools {:preloads [flow-storm.storm-preload #_flow-storm.preload]
                         :http-port 8021
                         :http-root "public"}
              :modules {:main
                        {:entries [org.foo.myscript]}}
-             :compiler-options {:infer-externs false}
+             :compiler-options {:infer-externs :auto}
              :output-to "public/dev-test.js"}}}
