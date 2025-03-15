@@ -1,17 +1,15 @@
 {:paths ["src"]
  :deps {}
  :aliases {:cljs-storm {:classpath-overrides {org.clojure/clojurescript nil}
-                        :extra-deps {thheller/shadow-cljs {:mvn/version "2.28.9"
+                        :extra-deps {thheller/shadow-cljs {:mvn/version "2.28.21"
                                                            :exclusions [org.clojure/clojurescript]}
-                                     com.github.flow-storm/clojurescript {:mvn/version "1.11.132-4"}
-                                     com.github.flow-storm/flow-storm-inst {#_#_:local/root "/home/jmonetta/my-projects/flow-storm-debugger"
-                                                                            :mvn/version "3.15.7"}}
+                                     com.github.flow-storm/clojurescript {:mvn/version "1.11.132-9"}
+                                     com.github.flow-storm/flow-storm-inst {:mvn/version "4.2.1"}
+                                     timelines-counters/timelines-counter {:local/root "/home/jmonetta/my-projects/flow-storm-debugger/examples/plugins/basic-plugin/"}}
                         :jvm-opts ["-Dcljs.storm.instrumentOnlyPrefixes=org.foo,dev"
                                    "-Dcljs.storm.instrumentSkipPrefixes=dev.skipped"
                                    "-Dcljs.storm.instrumentSkipRegex=.*test.*"
                                    "-Dcljs.storm.instrumentEnable=true"
                                    "-Dflowstorm.startRecording=true"]}
-           :vanilla {:extra-deps {thheller/shadow-cljs {:mvn/version "2.28.9"}
-                                  com.github.flow-storm/flow-storm-inst {:mvn/version "3.15.7"
-                                                                         #_#_:local/root "/home/jmonetta/my-projects/flow-storm-debugger"
-                                                                         }}}}}
+           :vanilla {:extra-deps {thheller/shadow-cljs {:mvn/version "2.28.21"}
+                                  com.github.flow-storm/flow-storm-inst {:mvn/version "4.2.1"}}}}}

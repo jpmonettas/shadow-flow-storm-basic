@@ -10,5 +10,4 @@
                         :http-root "public"}
              :modules {:main
                        {:entries [org.foo.myscript]}}
-             :compiler-options {:infer-externs :auto}
              :output-to "public/dev-test.js"}}}
