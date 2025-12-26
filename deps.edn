@@ -1,14 +1,7 @@
 {:paths ["src"]
  :deps {}
  :aliases {:cljs-storm {:classpath-overrides {org.clojure/clojurescript nil}
-                        :extra-deps {thheller/shadow-cljs {:mvn/version "2.28.21"
+                        :extra-deps {thheller/shadow-cljs {:mvn/version "3.3.4"
                                                            :exclusions [org.clojure/clojurescript]}
-                                     com.github.flow-storm/clojurescript {:mvn/version "1.11.132-9"}
-                                     com.github.flow-storm/flow-storm-inst {:mvn/version "4.2.1"}}
-                        :jvm-opts ["-Dcljs.storm.instrumentOnlyPrefixes=org.foo,dev"
-                                   "-Dcljs.storm.instrumentSkipPrefixes=dev.skipped"
-                                   "-Dcljs.storm.instrumentSkipRegex=.*test.*"
-                                   "-Dcljs.storm.instrumentEnable=true"
-                                   "-Dflowstorm.startRecording=true"]}
-           :vanilla {:extra-deps {thheller/shadow-cljs {:mvn/version "2.28.21"}
-                                  com.github.flow-storm/flow-storm-inst {:mvn/version "4.2.1"}}}}}
+                                     com.github.flow-storm/clojurescript {:mvn/version "1.12.134-2"}
+                                     com.github.flow-storm/flow-storm-inst {:mvn/version "4.5.9"}}}}}
