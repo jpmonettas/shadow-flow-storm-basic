@@ -1,7 +1,7 @@
 {:paths ["src"]
  :deps {}
  :aliases {:cljs-storm {:classpath-overrides {org.clojure/clojurescript nil}
-                        :extra-deps {thheller/shadow-cljs {:mvn/version "3.3.4"
+                        :extra-deps {thheller/shadow-cljs {:mvn/version "3.4.11"
                                                            :exclusions [org.clojure/clojurescript]}
-                                     com.github.flow-storm/clojurescript {:mvn/version "1.12.134-2"}
-                                     com.github.flow-storm/flow-storm-inst {:mvn/version "4.5.9"}}}}}
+                                     com.github.flow-storm/clojurescript {:mvn/version "1.12.145-1"}
+                                     com.github.flow-storm/flow-storm-inst {:mvn/version "4.6.0"}}}}}
